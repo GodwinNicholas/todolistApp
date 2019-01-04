@@ -1,0 +1,234 @@
+body{
+     margin: 0;
+     padding: 0;
+     background: #eee;
+}
+
+/* general styles */
+
+.site-container{
+     display: grid;
+     grid-template-columns: repeat(1fr, 12);
+     max-width: 1080px;
+     background-color: rgb(96, 138, 214);
+     margin: 100px auto;
+     padding: 20px;
+     border-radius: 15px;
+}
+nav{
+     grid-column: 1/12;
+     grid-row: 1/2;
+     background-color: rgb(96, 138, 214);
+     padding: 10px;
+}
+
+nav header{
+     margin: auto;
+}
+nav header h1{
+     text-align: center;
+     font-size: 3em;
+     color: #fff;
+     font-family: 'Courier New';
+}
+nav header p{
+     text-align: center;
+     font-family: Verdana;
+     font-weight: normal;
+     color: #fff;
+}
+.todo-list{
+     grid-column: 1/8;
+     grid-row: 2/3;
+}
+.todo-form{
+     grid-column: 8/12;
+     grid-row: 2/3;
+}
+.todo-form h2, .todo-list h2{
+     margin-top: 0;
+     color: #fff;
+     background-color: rgb(96, 138, 214);
+     font-size: 2em;
+     font-family: 'Courier New';
+     font-weight: normal;
+     text-align: center;
+}
+.todo-form{
+     text-align: center;
+}
+.todo-form form input[type=text]{
+     height: 55px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     outline: none;
+     border: none;
+     width: 70%;
+     padding: 5px;
+
+}
+.todo-form form button{
+     height: 55px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     margin-left: -.2em;
+     outline: none;
+     border: none;
+     border-top-right-radius: 5px;
+     border-bottom-right-radius: 5px;
+     background-color: rgb(2, 112, 2);
+     color: #fff;
+}
+.todo-list .taskp{
+     font-family: sans-serif;
+     font-weight: bold;
+     display: inline;
+     font-size: 1.5em;
+     padding: 7px;
+     color: #fff;;
+     top: -.5em;
+}
+.todo-list button{
+     position: absolute;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     background-color: red;
+     color: #fff;
+     outline: none;
+     border: none;
+     padding: 7px;
+     border-radius: 5px;
+     margin-left: 4px;
+     margin-top: 6px;
+}
+.container {
+     background-color: rgb(61, 86, 133);
+     display: block;
+     position: relative;
+     cursor: pointer;
+     padding-left: 35px;
+     margin-bottom: 12px;
+     font-size: 22px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+   }
+   /* Hide the browser's default checkbox */
+   .container input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+     position: absolute;
+     top: .3em;
+     left: .2em;
+     height: 25px;
+     width: 25px;
+     background-color: #eee;
+   }
+   
+   /* On mouse-over, add a grey background color */
+   .checkbox:hover input ~ .checkmark {
+     background-color: #ccc;
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .container :checked ~ .checkmark {
+     background-color: #2196F3;
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .container input:checked ~ .checkmark:after {
+     display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .container .checkmark:after {
+     left: 9px;
+     top: 5px;
+     width: 5px;
+     height: 10px;
+     border: solid white;
+     border-width: 0 3px 3px 0;
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+     transform: rotate(45deg);
+   }
+   ul li{
+        list-style: none;
+        color: rgb(194, 27, 27);
+        font-family: monospace;
+        letter-spacing: .1em;
+        font-size: 1.5em;
+        padding: 5px;
+        display: block;
+        font-weight: bold;
+   }
+   .notasks{
+        font-weight: bold;
+        font-size: 1em;
+        border: 1px solid grey;
+        color: #fff;;
+        text-align: center;
+        padding: 20px;
+        background: rgb(101, 126, 173);
+   }
+
+
+   
+   /* mobile styles */
+
+   @media screen and (max-width: 760px){
+     .site-container{
+          margin-top: 20px;
+          grid-gap: 10px;
+          border-radius: 0px;
+     }
+     nav{
+          padding: 10px;
+     }
+     
+     nav header{
+          margin: auto;
+     }
+     nav header h1{
+          text-align: center;
+          font-size: 3em;
+          color: #fff;
+          font-family: 'Courier New';
+     }
+     nav header p{
+          text-align: center;
+          font-family: Verdana;
+          font-weight: normal;
+          color: #fff;
+     }
+     .todo-list{
+          grid-column: 1/12;
+          grid-row: 2/3;
+     }
+     .todo-list p{
+          font-family: sans-serif;
+          font-weight: bold;
+          padding: 7px;
+          color: #fff;
+          top: -.5em;
+     }
+     .todo-form{
+          grid-column: 1/12;
+          grid-row: 3/4;
+     }
+   }
